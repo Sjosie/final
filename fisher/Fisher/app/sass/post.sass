@@ -1,0 +1,286 @@
+@import "_include/fonts"
+@import "_include/libs"
+@import "_include/vars"
+
+@import "_include/header"
+@import "_include/footer"
+@import "_include/setting"
+      
+.main-post
+  margin: 40px 0
+  .img_wrapp-post
+    margin-bottom: 30px
+    img
+      max-width: 100%
+  .category
+    margin: 10px 0
+    a
+      font-size: 0.75em
+      text-transform: uppercase
+      color: $btn
+  .title
+    h1
+      font-weight: bold
+      font-size: 1.375em
+      text-transform: uppercase
+      margin: 10px 0
+      color: $mainBlack
+  .line
+    height: 1px
+    width: 40px
+    background-color: $btn
+    margin: 15px auto
+  .content-post
+    margin: 25px 0
+    text-align: left
+    p 
+      margin: 40px 0
+      &:first-of-type
+        margin: 0 0 40px 0
+      &:last-of-type
+        margin: 40px 0 0 0
+    img 
+      margin: 40px 
+  .tags-list
+    border-top: 1px solid #e5e5e5
+    border-bottom: 1px solid #e5e5e5
+    text-align: left
+    padding: 10px 0
+    margin: 10px 0
+    a
+      color: #616161
+      font-family: "PlayfairDisplay"
+      font-style: italic
+      font-size: 1em
+      margin: 0 5px
+  aside 
+    text-align: left
+    .categories
+      margin-top: 60px
+    .search-blog
+      .content_wrapp
+        form
+          +flex(row, center, flex-start)
+          max-width: 100%
+          input
+            outline: none
+            border: 1px solid #e5e5e5
+            background-color: transparent
+            padding: 10px 20px
+            font-size: 1em
+            width: 80%
+          input::-webkit-input-placeholder
+            font-size: 0.75em
+            color: #aaaaaa
+          input::-moz-placeholder  
+            font-size: 0.75em
+            color: #aaaaaa
+          input::-moz-placeholder
+            font-size: 0.75em
+            color: #aaaaaa
+          input:-ms-input-placeholder
+            font-size: 0.75em
+            color: #aaaaaa
+          input::placeholder
+            font-size: 0.75em
+            color: #aaaaaa
+          button
+            outline: none
+            border-right: 1px solid #e5e5e5
+            border-top: 1px solid #e5e5e5
+            border-bottom: 1px solid #e5e5e5
+            border-left: none
+            background-color: transparent
+            height: 40px
+            width: 40px
+            flex-shrink: 0
+    .sidebar_block
+      margin-bottom: 60px
+      position: relative
+      .recent-posts
+        margin-top: 60px
+        .recent-post-item
+          margin: 15px 0
+          +flex(row, flex-start, flex-start)
+          .img_wrapp
+            width: 70px
+            height: 70px
+            flex-shrink: 0
+            position: relative
+            overflow: hidden
+            img
+              position: absolute
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
+              height: 100%
+              max-height: 100%
+              min-width: 100%
+          .content
+            margin-left: 20px
+            .date 
+              font-size: 1em
+              color: #aaaaaa
+              font-family: "PlayfairDisplay"
+              font-style: italic
+            .title
+              a
+                font-size: 0.875em
+                font-weight: bold
+                display: block
+                color: $mainBlack
+                line-height: 1.5
+      .tags
+        margin-top: 60px
+        .content_wrapp
+          a 
+            padding: 10px 12px 
+            border: 1px solid #e5e5e5
+            font-size: 0.8em
+            display: inline-block
+            color: $mainBlack
+            margin: 5px 5px 5px 0 
+            transition: .2s
+            &:hover
+              border: 1px solid $btn
+              text-decoration: none
+      .button-close_wrapp
+        position: absolute
+        display: none
+        right: 0
+        .button-close
+          border: none
+          background-color: transparent
+          height: 30px
+          width: 30px
+          position: relative
+          outline: none
+          &:after, &:before
+            content: ""
+            position: absolute
+            background-color: $btn
+            height: 2px
+            width: 25px
+            top: 50%
+            left: 50%
+          &:after
+            transform: translate(-50%,-50%) rotate(45deg)
+          &:before
+            transform: translate(-50%,-50%) rotate(-45deg)
+      .title_wrapp
+        .title
+            font-weight: bold
+            font-size: 1em
+            color: $mainBlack
+            margin: 0
+        .line 
+          width: 60px
+          height: 1px
+          background-color: $mainBlack
+          position: relative
+          margin: 15px 0 30px 0
+          &:after
+            content: ""
+            position: absolute
+            top: 3px
+            height: 1px
+            width: 30px
+            left: 0
+            background-color: $mainBlack
+      .content_wrapp
+        .li_active
+          & > a
+            &:after
+              transform: translateY(-50%) rotate(90deg) !important
+          & > .wrapp.active
+            display: block
+        ul 
+          padding: 0
+          margin: 0
+          li 
+            display: block
+            border-bottom: 1px solid #e5e5e5
+            padding: 8px 0
+            a
+              padding: 10px 0
+              color: $mainBlack
+              padding-left: 15px
+              font-size: 0.875em
+              position: relative
+              display: block
+              &:before
+                content: url(../img/icons/down-arrow-btn.svg)
+                position: absolute
+                left: 0px
+                top: 50%
+                transform: translateY(-50%) rotate(-90deg)
+                width: 9px
+              &:after
+                content: ""
+                position: absolute
+                top: 50%
+                right: 0
+                transform: translateY(-50%)
+                border: 5px solid transparent
+                border-left: 5px solid $mainBlack
+            &:last-of-type
+              border-bottom: none
+
+.pagination
+  padding: 0 
+  margin: 0
+  text-align: center
+  span
+    display: inline-block
+    margin-right: 10px
+  li 
+    display: inline-block
+    a 
+      padding-top: 5px
+    button, a
+      display: block
+      border: 1px solid #e5e5e5
+      background-color: transparent
+      height: 35px
+      width: 35px
+      outline: none
+      color: $mainBlack
+      font-size: 0.875em
+      position: relative
+      &.arrow
+        color: transparent
+        &:after
+          content: ""
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-20%, -50%)
+      &.right
+        &:after
+          border: 5px solid transparent
+          border-left: 5px solid $mainBlack
+      &.left
+        &:after
+          border: 5px solid transparent
+          border-right: 5px solid $mainBlack
+          transform: translate(-70%, -50%)
+    &.active
+      button, a
+        background-color: $btn
+        border: 1px solid $btn
+        color: $white
+
+// .filter-button_wrapp
+//   padding: 0
+//   display: none
+//   padding: 10px 0
+//   button
+//     width: 100%  
+//     outline: none
+// .filter
+//   transition: .3s
+//   overflow-y: auto
+//   &_active
+//     transform: translateX(0%) !important
+
+@import "_include/media-post"

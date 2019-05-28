@@ -1,0 +1,286 @@
+@import "_include/fonts"
+@import "_include/libs"
+@import "_include/vars"
+
+@import "_include/header"
+@import "_include/item"
+@import "_include/footer"
+@import "_include/setting"
+@import "../libs/ui-slider/ui-slider.css"
+
+.main-content
+  padding: 50px 0
+  .conclusion
+    background-color: #e5e5e5
+    padding: 10px
+    margin-bottom: 15px
+    +flex(row, center, space-between)
+    span
+      font-size: 0.8em
+      text-transform: uppercase
+      color: $mainBlack
+    .conclusion_type
+      +flex(row, center, flex-start)
+      .icon
+        background-color: #fff
+        height: 30px
+        width: 30px
+        margin-right: 10px
+        position: relative
+        button
+          position: absolute
+          top: 50%
+          left: 50%
+          outline: none
+          padding: 0
+          border: none
+          background-color: transparent
+          transform: translate(-50%, -50%)
+          svg 
+            height: 18px
+            width: 18px
+            margin-top: 4px
+            fill: $mainBlack
+        &_active
+          background-color: $btn
+          button
+            svg
+              fill: #ffffff
+    .sort
+      +flex(row, center, flex-end)      
+      .select_wrapp
+        &:last-of-type
+          select
+            margin-right: 0
+        #select_show
+          width: 80px
+        #select_sort
+          width: 120px
+        select
+          margin-left: 10px
+          margin-right: 30px
+          outline: none
+          border: none
+          color: $mainBlack
+          background-color: #fff
+          padding: 5px 0 5px 10px 
+  aside 
+    text-align: left
+    .sidebar_block
+      margin-bottom: 60px
+      position: relative
+      .button-close_wrapp
+        position: absolute
+        display: none
+        right: 0
+        .button-close
+          border: none
+          background-color: transparent
+          height: 30px
+          width: 30px
+          position: relative
+          outline: none
+          &:after, &:before
+            content: ""
+            position: absolute
+            background-color: $btn
+            height: 2px
+            width: 25px
+            top: 50%
+            left: 50%
+          &:after
+            transform: translate(-50%,-50%) rotate(45deg)
+          &:before
+            transform: translate(-50%,-50%) rotate(-45deg)
+      .title_wrapp
+        .title
+          font-weight: bold
+          font-size: 1em
+          color: $mainBlack
+          margin: 0
+        .line 
+          width: 60px
+          height: 1px
+          background-color: $mainBlack
+          position: relative
+          margin: 15px 0 30px 0
+          &:after
+            content: ""
+            position: absolute
+            top: 3px
+            height: 1px
+            width: 30px
+            left: 0
+            background-color: $mainBlack
+      .content_wrapp
+        .li_active
+          & > a
+            &:after
+              transform: translateY(-50%) rotate(90deg) !important
+          & > .wrapp.active
+            display: block
+        ul 
+          li 
+            display: block
+            border-bottom: 1px solid #e5e5e5
+            padding: 8px 0
+            a 
+              padding: 10px 0
+              color: $mainBlack
+              padding-left: 15px
+              font-size: 0.875em
+              position: relative
+              display: block
+              &:before
+                content: url(../img/icons/down-arrow-btn.svg)
+                position: absolute
+                left: 0px
+                top: 50%
+                transform: translateY(-50%) rotate(-90deg)
+                width: 9px
+            &:last-of-type
+              border-bottom: none
+        & > ul 
+          padding: 0
+          margin: 0
+          & > li
+            display: block
+            & > a
+              font-weight: bold
+              font-size: 1em
+              color: $mainBlack
+              margin: 0
+              padding-left: 0
+              &:before
+                display: none
+            & > .wrapp
+              & > ul 
+                padding: 0
+                margin: 0
+                ul 
+                  padding-left: 15px
+                & > li 
+                  & > .wrapp
+                    display: none
+                  & > a
+                    &:after
+                      content: ""
+                      position: absolute
+                      top: 50%
+                      right: 0
+                      transform: translateY(-50%)
+                      border: 5px solid transparent
+                      border-left: 5px solid $mainBlack
+                  
+
+.price-range
+  margin-top: 60px
+  .title_wrapp
+    margin-bottom: 60px
+  .price-range-slider
+    margin-top: 20px
+    width: 100%
+    .range-value
+      margin: 0
+      input
+        width: 100%
+        background: none
+        color: #000
+        font-size: 16px
+        font-weight: initial
+        box-shadow: none
+        border: none
+        margin: 20px 0 10px 0
+    .range-bar
+      border: none
+      background: #e5e5e5
+      height: 3px
+      width: 96%
+      margin-left: 8px
+      .ui-slider-range
+        background: $btn
+      .ui-slider-handle 
+        border: 10px solid transparent
+        border-top: 10px solid $btn
+        background-color: transparent
+        height: 20px
+        width: 20px
+        top: -15px
+        outline: none
+        cursor: pointer
+      .ui-slider-handle + span 
+        background-color: transparent 
+ 
+.main-content
+  aside
+    .sidebar_block
+      .brands
+        margin-top: 60px
+        .title_wrapp
+          margin-bottom: 40px
+        .content_wrapp
+          & > ul
+            & >li 
+              & > .wrapp
+                & > ul
+                  & > li
+                    & > a:after
+                      content: '('attr(data-count)')'
+                      border: none
+
+.pagination
+  padding: 0 
+  margin: 0
+  text-align: right
+  span
+    display: inline-block
+    margin-right: 10px
+  li 
+    display: inline-block
+    margin: 2,5px
+    button 
+      border: 1px solid #e5e5e5
+      background-color: transparent
+      height: 35px
+      width: 35px
+      outline: none
+      color: $mainBlack
+      font-size: 0.875em
+      position: relative
+      &.arrow
+        color: transparent
+        &:after
+          content: ""
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-20%, -50%)
+      &.right
+        &:after
+          border: 5px solid transparent
+          border-left: 5px solid $mainBlack
+      &.left
+        &:after
+          border: 5px solid transparent
+          border-right: 5px solid $mainBlack
+          transform: translate(-70%, -50%)
+    &.active
+      button
+        background-color: $btn
+        border: 1px solid $btn
+        color: $white
+
+.filter-button_wrapp
+  padding: 0
+  display: none
+  padding: 10px 0
+  button
+    width: 100%  
+    outline: none
+.filter
+  transition: .3s
+  overflow-y: auto
+  &_active
+    transform: translateX(0%) !important
+
+@import "_include/media-catalogue"

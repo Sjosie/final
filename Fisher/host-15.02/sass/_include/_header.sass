@@ -1,0 +1,515 @@
+.top-info
+  padding: 5px 30px
+  max-width: 1860px
+  margin: auto
+  color: $mainBlack
+  ul
+    padding: 0
+    margin: 0
+    text-align: left
+    +flex(row, center, space-between)
+    li 
+      display: inline-block
+      padding: 0 30px
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        background-color: #e5e5e5
+        width: 1px
+        height: 10px
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+      &:first-of-type
+        padding: 0 30px 0 0
+        &:before
+          display: none
+      &:last-of-type
+        padding: 0 0 0 30px
+      .wrapp
+        +flex(row, center, flex-start)
+        .content
+          margin-left: 5px
+          font-size: 0.75em
+          a 
+            color: $mainBlack
+  
+.header_fixed
+  position: fixed
+  top: 0
+  z-index: 22
+  width: 100%
+  animation: scroll 0.5s
+
+@keyframes scroll
+  0%
+    transform: translateY(-100%)
+  100%
+    transform: translateY(0%)
+
+.mobile-menu
+  position: fixed
+  z-index: 20
+  width: 100%
+  transform: translateX(100%)
+  transition: .3s
+  height: 100vh
+  top: 0
+  left: 0
+  overflow-y: auto
+  padding-top: 50px
+  bottom: 0
+  right: 0
+  background-color: $mainBlack
+  text-align: left
+  font-size: 1.2em
+  &_active
+    transform: translateX(0%)
+  .link
+    text-align: center
+  .active 
+    & > ul 
+      height: auto
+  a
+    color: $white
+  & > ul
+    margin: 30px auto 0 auto
+    padding: 0
+    max-width: 300px
+    li 
+      margin: 5px 0
+      display: block
+      border-bottom: 1px solid $footerWhite
+      padding: 5px 0
+      &:last-of-type
+        border-bottom: none
+    .wrapp 
+      text-align: center
+    ul 
+      height: 0
+      overflow: hidden
+      margin: 0
+      padding: 0
+      text-align: left
+      transition: .3s
+      padding-left: 20px
+      +flex(column, cetner, center)
+    .additional-menu_link 
+      position: relative
+      &:after
+        content: url(../img/icons/down-arrow-white.svg)
+        position: absolute
+        width: 10px
+        display: block
+        right: 0px
+        top: 50%
+        transform: translateY(-50%)
+    .li_active
+      &:after
+        content: url(../img/icons/down-arrow-white.svg)
+        display: none   
+
+header
+  background-color: $mainBlack
+  padding: 0 30px
+  max-width: 1860px
+  margin: auto
+  position: relative
+  color: $white
+  transition: .3s
+  z-index: 22
+  .container-header 
+    +flex(row, center, space-between)
+    .logo
+      width: 20%
+      text-align: left
+      +flex(row,center, flex-start)
+      .img_wrapp
+        flex-shrink: 0
+      span.logo_name 
+        padding-top: 3px
+        display: block
+        margin-left: 20px
+        font-weight: bold
+        font-size: 1em
+        //letter-spacing: 2.5px
+        line-height: 20px
+    .menu
+      .banner-menu_wrapp
+        width: 40%
+        position: relative
+        float: left
+        &:after
+          content: ""
+          clear: both
+          display: block
+        .banner-menu 
+          position: relative
+          text-align: center
+          .content
+            position: absolute
+            bottom: 30px
+            left: 50%
+            transform: translateX(-50%)
+            .text
+              font-family: "PlayfairDisplay"
+              margin-bottom: 10px
+              span
+                display: block
+              .subtitle 
+                font-size: 1.25em
+              .main
+                font-size: 3.125em
+                line-height: 40px
+            .line_wrapp
+              margin: 0 0 20px 0
+      ul 
+        margin: 0
+        padding: 0
+        li 
+          display: block
+      ul.menu_ul > li
+        display: inline-block
+        padding: 20px 15px
+        & > a
+          font-size: 0.875em
+          color: $white
+          text-transform: uppercase
+          font-weight: bold
+          letter-spacing: 0.7px
+          position: relative
+          &:before 
+            content: ""
+            position: absolute
+            border: 5px solid transparent
+            border-bottom: 5px solid $white
+            bottom: -24px
+            display: none
+            z-index: 3
+            left: 50%
+            transform: translateX(-50%)
+      ul.menu_ul > li.additional-menu_link
+        &:hover
+          & > .wrapp
+            display: block
+          & > a
+            &:before
+              display: block
+        & > a
+          position: relative
+          &:after
+            content: url(../img/icons/down-arrow-white.svg)
+            position: absolute
+            width: 10px
+            right: -15px
+            top: 50%
+            transform: translateY(-50%)
+          &:before 
+            content: ""
+            position: absolute
+            border: 5px solid transparent
+            border-bottom: 5px solid $white
+            bottom: -24px
+            display: none
+            left: 50%
+            transform: translateX(-50%)
+        & > .wrapp 
+          max-width: 780px
+          display: none
+          z-index: 10
+          position: absolute
+          top: 100%
+          left: 50%
+          transform: translateX(-50%)
+          background-color: $white
+          color: $mainBlack
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+          padding: 50px 40px
+          text-align: left
+          width: 100%
+          &.has_banner
+            max-width: 1170px
+            & > ul
+              width: 60%
+              float: left
+              position: relative
+          & > ul
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            & > li
+              width: 33%
+              border-right: 1px solid #e5e5e5
+              margin-bottom: 45px
+              padding-left: 30px
+              &:nth-child(3n)
+                border-right: 1px solid transparent
+              & > a
+                color: $mainBlack
+                font-size: 1em
+                font-weight: bold
+                text-transform: uppercase
+              & > .wrapp
+                & > ul 
+                  padding: 0
+                  margin: 20px 0 0 0
+                  text-align: left
+                  & > li
+                    margin: 5px 0 5px 15px
+                    position: relative
+                    display: block
+                    &:before
+                      content: url(../img/icons/down-arrow.svg)
+                      position: absolute
+                      width: 8px
+                      left: -15px
+                      top: 50%
+                      transform: translateY(-50%) rotate(-90deg)
+                    & > a
+                      color: $mainBlack
+                      font-size: 0.875em
+                      font-weight: normal
+    .icons
+      ul
+        padding: 0
+        margin: 0
+        li 
+          display: inline-block
+          position: relative
+          padding: 0 10px 0 10px
+          &:after
+            content: ""
+            height: 10px
+            width: 1px
+            position: absolute
+            background-color: #fff
+            top: 50%
+            opacity: 0.2
+            right: 0
+            transform: translateY(-50%)
+          &:first-of-type
+            padding: 0 10px 0 0
+          &:last-of-type
+            padding: 0 0 0 10px
+            &:after
+              background: transparent
+          button
+            border: none
+            outline: none
+            background-color: transparent
+            img
+              height: 19px
+        .search-button
+          position: relative
+          &_active
+            &:before
+              content: ""
+              bottom: -22px
+              transform: translateX(-50%)
+              left: 50%
+              position: absolute
+              border: 5px solid transparent
+              border-bottom: 5px solid $white
+        .cart-button
+          position: relative
+          &_active
+            &:before
+              content: ""
+              bottom: -22px
+              transform: translateX(-50%)
+              left: 50%
+              position: absolute
+              border: 5px solid transparent
+              border-bottom: 5px solid $white
+    .menu-button_wrapp
+      display: none
+      padding-top: 3px
+      .menu-button
+        background-color: transparent
+        border: none
+        position: relative
+        outline: none
+        padding: 0
+        height: 13px
+        &:before, &:after
+          content: ""
+          position: absolute
+          width: 18px
+          height: 1px
+          background-color: $white
+          left: 0
+          transition: .3s
+        &:before
+          top: 0
+        &:after
+          bottom: 0
+        span
+          background-color: $white
+          display: block
+          height: 1px
+          width: 18px
+          transition: .1s
+        &_active
+          span 
+            opacity: 0
+          &:before
+            top: 50%
+            transform: rotate(-45deg)
+          &:after
+            top: 50%
+            transform: rotate(45deg)
+  .mini-cart
+    position: absolute
+    width: 370px
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+    z-index: 10
+    padding: 20px 20px 
+    right: 0
+    background-color: $white
+    color: $mainBlack
+    display: none
+    z-index: 11
+    text-align: left
+    &_active
+      display: block    
+    .current-items
+      border-bottom: 1px solid #e5e5e5
+      padding-bottom: 15px
+      span 
+        font-size: 0.875em
+    .main
+      .item-cart
+        margin: 15px 0
+        +flex(row,center,space-between)
+        .wrapp
+          +flex(row, center, flex-start)
+          flex-shrink: 0
+          .img_wrapp
+            width: 90px
+            height: 90px
+            //background-color: #d5d5d5
+            position: relative
+            img 
+              position: absolute
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
+              max-width: 100%
+          .content
+            margin-left: 20px
+            .name 
+              line-height: 25px
+              font-size: 1em
+              max-width: 180px
+            .count
+              font-size: 0.8em
+            .price
+              line-height: 25px
+              font-size: 1em
+              color: #f94e4e
+        .delete
+          padding-right: 5px
+          button 
+            color: #f94e4e
+            background-color: transparent
+            border: none
+            outline: none
+    .total
+      padding: 20px 0 10px 0
+      border-top: 1px solid #e5e5e5
+      .total-span
+        text-transform: uppercase
+      .value
+        color: #f94e4e
+        margin-left: 10px
+    .links
+      .link 
+        display: inline-block
+        width: 48%
+        a 
+          display: block
+          text-align: center
+  .search
+    position: absolute
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+    width: 370px
+    z-index: 10
+    padding: 20px 20px 
+    right: 20px
+    background-color: $white
+    color: $mainBlack
+    text-align: left
+    display: none
+    &_active
+      display: block
+    form
+      +flex(row, center, space-between)
+      border: 1px solid $btn
+      padding: 0 20px
+      input
+        width: 100%
+        border: none
+        outline: none
+        padding: 15px 0
+      button
+        border: none
+        padding: 0
+        outline: none
+        background-color: transparent
+        svg
+          fill: $mainBlack
+          height: 20px
+          width: 20px
+    .current-items
+      padding-bottom: 15px
+      margin-top: 30px
+      font-size: 0.875em
+      span 
+        font-size: 0.875em
+    .main
+      border-bottom: 1px solid #e5e5e5
+      margin-bottom: 25px
+      .item-cart
+        margin: 15px 0
+        +flex(row,center,space-between)
+        .wrapp
+          +flex(row, center, flex-start)
+          flex-shrink: 0
+          .img_wrapp
+            width: 90px
+            height: 90px
+            //background-color: #d5d5d5
+            position: relative
+            img 
+              position: absolute
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)
+              max-width: 100%
+          .content
+            margin-left: 20px
+            .name 
+              line-height: 25px
+              font-size: 1em
+              max-width: 180px
+            .count
+              font-size: 0.8em
+            .price
+              line-height: 25px
+              font-size: 1em
+              color: #f94e4e
+        .delete
+          padding-right: 5px
+          button 
+            color: #f94e4e
+            background-color: transparent
+            border: none
+            outline: none
+    .links
+      .link 
+        display: inline-block
+        a 
+          display: block
+          text-align: center
+      

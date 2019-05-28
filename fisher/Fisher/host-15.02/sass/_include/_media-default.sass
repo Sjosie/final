@@ -1,0 +1,110 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+	.top-info
+		display: none
+	header
+		padding: 5px 30px
+		.container-header
+			.logo
+				width: 50%
+			.menu
+				display: none
+			.icons
+				margin-left: auto
+				margin-right: 20px
+			.menu-button_wrapp
+				display: block
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	footer.footer
+		.info
+			.info-item
+				max-width: 400px
+				margin: auto
+				float: none
+				border-top: 1px solid $footerWhite
+				border-bottom: none
+				border-left: 1px solid $footerWhite
+				border-right: 1px solid $footerWhite
+				&:last-of-type
+					border-bottom: 1px solid $footerWhite
+					
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	header
+		padding: 5px 15px
+		.container-header
+			.logo
+				width: 60%
+				span.logo_name
+					margin-left: 10px
+	.sales-block
+		ul.tabs 
+			li 
+				margin: 5px auto
+		
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	body
+		font-size: 14px
+	header
+		.container-header
+			.icons
+				display: none
+			.logo
+				width: 80%
+				.img_wrapp
+					img 
+						width: 70%
+	footer.footer
+		.links
+			ul 
+				li 
+					width: 50%
+					padding: 0 5px 
+		.bottom-info
+			+flex(column, center, center)
+			.copyright
+				margin-bottom: 10px		
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

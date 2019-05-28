@@ -1,0 +1,171 @@
+@import "_include/fonts"
+@import "_include/libs"
+@import "_include/vars"
+
+@import "_include/header"
+@import "_include/item"
+@import "_include/footer"
+@import "_include/setting"
+
+input::-webkit-input-placeholder
+  color: #fff
+input::-moz-placeholder  
+  color: #fff
+input::-moz-placeholder
+  color: #fff
+input:-ms-input-placeholder
+  color: #fff
+input::placeholder
+  color: #fff
+
+.tabs_wrapp
+  border: 1px solid #e5e5e5
+  padding: 0 40px 40px 40px 
+  margin-bottom: 50px
+  .tab-container
+    min-height: auto
+    padding-top: 40px
+    text-align: left
+    .thumb-wrap
+      position: relative
+      padding-bottom: 56.25% /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+      padding-top: 30px
+      height: 0
+      overflow: hidden
+      iframe 
+        position: absolute
+        border: none
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+  ul
+    margin: 0
+    padding: 0
+    border-bottom: 1px solid #e5e5e5
+    li 
+      display: inline-block
+      outline: none
+      padding: 0px 30px
+      position: relative
+      &:after
+        content: ""
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%) translateX(50%) rotate(45deg)
+        background-color: #aaaaaa
+        height: 1px
+        width: 10px
+      &:before
+        content: ""
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%) translateX(50%) rotate(-45deg)
+        background-color: #aaaaaa
+        height: 1px
+        width: 10px
+      &:last-of-type
+        &:after, &:before
+          display: none
+      &.ui-state-active
+        a 
+          color: $mainBlack
+          &:after
+            content: ""
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%) translateY(50%)
+            height: 3px
+            background-color: $btn
+            width: 100%
+      a 
+        display: block
+        outline: none
+        position: relative
+        padding:  20px 0px
+        font-size: 1em
+        text-decoration: none
+        font-weight: bold
+        color: #aaaaaa
+        transition: .2s
+        &:hover
+          color: $mainBlack
+
+
+.main-info
+  margin: 60px 0
+  text-align: left
+  .img_wrapp
+    text-align: center
+    padding-top: 40px
+    img 
+      max-width: 100%
+      max-height: 100%
+  .wrapp
+    background-color: #f2f2f2
+    padding: 40px
+    .title
+      font-size: 1.5em
+      color: $mainBlack
+      font-weight: bold
+      margin-bottom: 10px
+    .price
+      margin-top: 20px
+      font-size: 1.5em
+      color: #f94e4e
+      font-weight: bold
+    .description
+      font-size: 0.875em
+      line-height: 1.7em
+    .links
+      +flex(row, center, flex-start)
+      & > div
+        margin-right: 10px
+      .input_wrapp
+        background-color: $mainBlack
+        +flex(row, center, flex-start)
+        padding: 3px 15px
+        input
+          width: 20px
+          background-color: $mainBlack
+          border: none
+          outline: none
+          text-align: center
+          color: $white
+        .button_wrapp
+          margin-left: 16px
+          button 
+            background-color: $mainBlack
+            border: none
+            padding: 0
+            display: block
+            margin-right: 2px
+            margin-left: 2px
+            outline: none
+            &.plus
+              transform: rotate(180deg)
+              margin-bottom: 1px
+            svg 
+              height: 5px
+              width: 10px
+              fill: #fff
+              stroke: #fff
+              stroke-width: 4
+    .info
+      margin-top: 40px
+      color: #aaaaaa
+      span
+        text-transform: uppercase
+        color: $mainBlack
+      a 
+        color: #aaaaaa
+        margin-left: 5px
+  
+footer.footer
+  margin-top: 40px
+
+  
+@import "_include/media-item" // Всегда в конце
