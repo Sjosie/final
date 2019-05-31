@@ -1,0 +1,19 @@
+{
+  "name": "Template",
+  "description": "",
+  "main": "common.min.js",
+  "authors": [
+    "Volkov Evgeniy"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.8.1",
+    "readme.ru": "https://github.com/IonDen/ion.tabs/blob/master/readme.ru.md",
+    "jq-timeTo": "https://github.com/Lexxus/jq-timeTo.git#^1.2.3",
+    "magnific-popup": "^1.1.0",
+    "jqueryui-touch-punch": "https://github.com/furf/jquery-ui-touch-punch.git"
+  }
+}

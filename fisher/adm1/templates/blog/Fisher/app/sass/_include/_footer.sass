@@ -1,0 +1,116 @@
+footer.footer
+  background-color: $mainBlack
+  padding-top: 60px
+  color: $white
+  .logo
+    padding: 10px 25px
+    border: 1px solid $footerWhite
+    display: inline-block
+    .wrapp
+      +flex(row, center, center)
+      span.logo_name 
+        padding-top: 3px
+        display: block
+        margin-left: 20px
+        font-weight: bold
+        font-size: 1em
+        //letter-spacing: 2.5px
+        line-height: 20px
+  .footer-text
+    margin: 30px 0
+    p
+      max-width: 660px
+      font-family: "PlayfairDisplay";
+      margin: 0 auto
+      padding: 0 10px
+      color: #959595
+      font-style: italic
+      font-size: 1em
+  .social-icons
+    .wrapp
+      margin: 0 0 30px 0
+      ul 
+        padding: 0
+        margin: 0
+        +flex(row, center, center)
+        flex-wrap: wrap
+        li
+          display: block
+          a
+            width: 45px
+            height: 45px
+            +flex(row, center, center)
+            border-radius: 50%
+            background-color: rgba($white , .08)
+            transition: .2s
+            margin: 5px
+            img 
+              max-width: 16px
+          &:hover
+            a
+             background-color: $btn
+  .info
+    margin-bottom: 10px
+    .info-item
+      border-top: 1px solid $footerWhite
+      border-bottom: 1px solid $footerWhite
+      border-left: 1px solid $footerWhite
+      &:last-of-type
+        border-right: 1px solid $footerWhite
+      .wrapp
+        +flex(row, center, center)
+        padding: 20px 0
+        .img_wrapp
+          margin-right: 10px
+        .content
+          font-size: 0.875em
+          color: $white
+          a 
+            font-size: 0.875em
+            color: rgba($white ,.6)
+  .title
+    margin-bottom: 40px
+    h6
+      color: $white
+      font-size: 1em
+      text-transform: uppercase
+      font-weight: bold
+      letter-spacing: 1.6px
+  .links
+    ul
+      padding: 0
+      margin: 0
+      +flex(row , center, flex-start)
+      flex-wrap: wrap
+      li 
+        display: inline-block
+        width: 33%
+        margin: 5px 0
+        a 
+          color: #959595
+          position: relative
+          font-size: 0.875em
+          &:before
+            content: url(../img/icons/down-arrow-dark.svg)
+            position: absolute
+            color: #959595
+            width: 8px
+            left: -15px
+            top: 50%
+            transform: translateY(-50%) rotate(-90deg)
+  .bottom-info
+    margin-top: 50px
+    border-top: 1px solid $footerWhite
+    padding: 20px 0
+    +flex(row, center, space-between)
+    span 
+      font-size: 0.875em
+      color: #959595
+    .cards
+      ul 
+        padding: 0
+        margin: 0
+        text-align: right
+        li
+          display: inline-block
+          margin-left: 10px

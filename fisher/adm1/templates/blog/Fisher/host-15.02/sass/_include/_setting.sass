@@ -1,0 +1,159 @@
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	text-align: center
+	img 
+		max-width: 100%
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.clearfix
+	clear: both
+
+.preloader
+	max-height: 200px
+	padding: 100px 0
+	+flex(row, center, center)
+	img 
+		width: 50px
+		height: 50px
+
+.tab-container
+	min-height: 420px
+
+.link
+	padding: 10px 0
+	.link_style
+		padding: 12px 14px
+		text-decoration: none
+		text-transform: uppercase
+		font-size: .75em
+		background-color: $white
+		color: $mainBlack
+		border: 2px solid $white
+		transition: .3s
+		position: relative
+		&:hover
+			background-color: transparent
+			text-decoration: none
+			color: $white
+	.blue
+		background-color: $btn
+		color: $white
+		border: 2px solid $btn
+		&:hover
+			color: $btn
+			background-color: transparent
+	.black
+		background-color: $mainBlack
+		color: $white
+		border: 2px solid $mainBlack
+		&:hover
+			color: $mainBlack
+			background-color: transparent
+
+.white
+	color: $white
+
+.black
+	color: $mainBlack
+
+.title-default
+	margin-bottom: 40px
+	h5 
+		text-transform: uppercase
+		font-size: 1.25em
+		margin: 0 0 20px 0
+		color: $mainBlack
+		line-height: 1em
+	figure.title
+		+flex(row, center, center)
+		height: 5px
+		.line
+			width: 80px
+			height: 1px
+			background-color: $mainBlack
+			margin: 0 10px 
+			position: relative
+			&:after
+				content: ""
+				position: absolute
+				width: 40px
+				top: 3px
+				height: 1px
+				background-color: $mainBlack
+		.left
+			&:after
+				right: 0
+		.right
+			&:after
+				left: 0
+
+.line_wrapp
+	text-align: center
+	margin: 10px 0
+	.white
+		background-color: $white
+	.line
+		width: 100px
+		height: 1px
+		margin: 0 auto 4px auto
+	.subline
+		width: 60px
+		height: 1px
+		margin: auto
+
+.slick-slide:focus
+	outline: none
+
+.slick-dotted.slick-slider
+	margin-bottom: 0

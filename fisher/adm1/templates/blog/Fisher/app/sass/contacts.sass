@@ -1,0 +1,74 @@
+@import "_include/fonts"
+@import "_include/libs"
+@import "_include/vars"
+
+@import "_include/header"
+@import "_include/item"
+@import "_include/footer"
+@import "_include/setting"
+
+.main
+  .map_wrapp
+    background-color: #d5d5d5
+    min-height: 500px
+    width: 100%
+    margin-top: 60px
+  .info_wrapp
+    background-color: $mainBlack
+    padding: 35px 0
+    margin: 30px 0
+    text-align: center
+    .icon_wrapp
+      width: 60px
+      height: 60px
+      border: 1px solid rgba($white, .2)
+      border-radius: 50%
+      margin: 0 auto 20px auto
+      position: relative
+      img 
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        max-width: 22px
+    .title
+      color: $white
+      font-size: 1em
+      text-transform: uppercase
+      letter-spacing: 1.6px
+      font-weight: bold
+    .line
+      background-color: $btn
+      width: 40px
+      height: 1px
+      margin: 15px auto
+    .value
+      font-size: 0.875em
+      color: #959595
+  .title-default
+    margin: 30px 0
+  form.feedback
+    max-width: 850px
+    margin: 20px auto
+    position: relative
+    .response
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      
+    input, textarea
+      width: 100%
+      border: 1px solid #e5e5e5
+      margin: 10px 0
+      padding: 20px
+      outline: none
+    textarea, textarea:focus, textarea:active
+      min-width: 100%
+      max-width: 100%
+      max-height: 160px
+      height: 160px
+      min-height: 160px
+      resize: none
+
+@import "_include/media-contacts"
